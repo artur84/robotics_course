@@ -1,5 +1,5 @@
 
-(1)With the new catkin_tools, there are few changed from the Catkin-y method described above. To generate eclipse-project you need to execute:
+(1)With the new catkin_tools, (http://catkin-tools.readthedocs.io/en/latest/index.html)there are few changed from the Catkin-y method described above. To generate eclipse-project you need to execute:
 
 	catkin build  --force-cmake -G"Eclipse CDT4 - Unix Makefiles" 
 

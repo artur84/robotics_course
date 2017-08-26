@@ -1,8 +1,8 @@
-<!-- creates a simulation of the arm_iteshu robot and shows it on rviz
+<!-- creates a simulation of the rc_armsim robot and shows it on rviz
 -->
 <launch>
  
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find armsim_iteshu)/urdf/arm.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find rc_armsim)/urdf/arm.urdf.xacro'" />
  
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
  
@@ -10,6 +10,6 @@
  
   <node pkg="robot_state_publisher" name="robot_state_publisher"  type="state_publisher" />
  
-  <node name="rviz" pkg="rviz" type="rviz" args="-d arm_iteshu.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d rc_armsim.rviz" />
  
 </launch>

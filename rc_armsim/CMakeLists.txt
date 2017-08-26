@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(armsim)
+project(rc_armsim)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -74,7 +74,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 #catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES armsim
+#  LIBRARIES rc_armsim
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 #)

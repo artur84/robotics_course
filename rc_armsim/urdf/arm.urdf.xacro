@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
  
-<robot name="arm_iteshu" 
+<robot name="rc_armsim" 
     xmlns:xacro="http://www.ros.org/wiki/xacro"
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
@@ -15,7 +15,7 @@
        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
        xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics">
  
-	<xacro:include filename="$(find armsim_iteshu)/urdf/arm.xacro" />
+	<xacro:include filename="$(find rc_armsim)/urdf/arm.xacro" />
  
 	<link name="world" />
  

@@ -2,7 +2,7 @@
  
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find armsim_iteshu)/urdf/arm_macros.xacro" />
+<xacro:include filename="$(find rc_armsim)/urdf/arm_macros.xacro" />
 <gazebo_propiedades_link nombre="base_brazo_link" material="Black" />
  
 <gazebo_propiedades_link nombre="hombro_link" material="Black" />
