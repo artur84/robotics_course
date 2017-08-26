@@ -10,6 +10,6 @@
  
   <node pkg="robot_state_publisher" name="robot_state_publisher"  type="state_publisher" />
  
-  <node name="rviz" pkg="rviz" type="rviz" args="-d rc_armsim.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rc_armsim)/conf/rc_armsim.rviz" />
  
 </launch>
