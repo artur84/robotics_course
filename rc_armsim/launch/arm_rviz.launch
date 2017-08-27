@@ -3,6 +3,8 @@
 <launch>
  
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find rc_armsim)/urdf/arm.urdf.xacro'" />
+
+  <rosparam param="source_list">["joint_input"]</rosparam>
  
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
  
