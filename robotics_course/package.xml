@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>robotics_course</name>
+  <version>0.0.0</version>
+  <description>The robotics_course meta_package</description>
+  <maintainer email="artur@todo.todo">artur</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rc_armsim</run_depend>
+  <run_depend>artools_launch</run_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+ <export>
+   <metapackage />
+ </export>
+</package>
