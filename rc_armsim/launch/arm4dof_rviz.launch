@@ -2,7 +2,7 @@
 -->
 <launch>
  
-  <param name="robot_description" command="$(find xacro)/xacro '$(find rc_armsim)/urdf/arm.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro '$(find rc_armsim)/urdf/arm4dof.urdf'" />
 
   <rosparam param="source_list">["joint_input"]</rosparam>
  
@@ -12,6 +12,6 @@
  
   <node pkg="robot_state_publisher" name="robot_state_publisher"  type="state_publisher" />
  
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rc_armsim)/rviz/rc_armsim.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rc_armsim)/rviz/arm4dof.rviz" />
  
 </launch>
