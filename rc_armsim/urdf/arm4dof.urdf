@@ -99,7 +99,7 @@
     <child link="link4"/>
   </joint>
 
-  <link name="link_round">
+  <link name="tip">
     <visual>
       <geometry>
         <cylinder length="0.03" radius="0.01"/>
@@ -109,12 +109,12 @@
     </visual>
   </link>
 
-<joint name="link4_to_link_round" type="revolute">
+<joint name="link4_to_tip" type="revolute">
     <axis xyz="0 0 1"/>
     <limit effort="1000.0" lower="-1.5" upper="1.5" velocity="0.5"/>
     <origin rpy="0 -0.9 0" xyz="0.032 0.0 -0.03"/>
     <parent link="link4"/>
-    <child link="link_round"/>
+    <child link="tip"/>
   </joint>
 
  
