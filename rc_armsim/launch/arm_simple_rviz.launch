@@ -1,0 +1,17 @@
+<!-- creates a simulation of the rc_armsim robot and shows it on rviz
+-->
+<launch>
+ 
+  <param name="robot_description" command="$(find xacro)/xacro '$(find rc_armsim)/urdf/arm_simple.urdf'" />
+
+  <rosparam param="source_list">["joint_input"]</rosparam>
+ 
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+ 
+  <param name="use_gui" value="true"/>
+ 
+  <node pkg="robot_state_publisher" name="robot_state_publisher"  type="state_publisher" />
+ 
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rc_armsim)/rviz/arm_simple.rviz" />
+ 
+</launch>

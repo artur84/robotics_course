@@ -102,11 +102,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        tip:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         world:
           Alpha: 1
           Show Axes: false
@@ -132,8 +127,6 @@ Visualization Manager:
           Value: true
         link4:
           Value: true
-        tip:
-          Value: true
         world:
           Value: true
       Marker Scale: 0.300000012
@@ -148,8 +141,7 @@ Visualization Manager:
               link2:
                 link3:
                   link4:
-                    tip:
-                      {}
+                    {}
       Update Interval: 0
       Value: true
   Enabled: true
