@@ -6,6 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Grid1
       Splitter Ratio: 0.5
     Tree Height: 435
   - Class: rviz/Selection
@@ -31,7 +32,7 @@ Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.200000003
-      Cell Size: 0.0500000007
+      Cell Size: 0.100000001
       Class: rviz/Grid
       Color: 160; 160; 164
       Enabled: true
@@ -190,10 +191,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.0103977453
+      Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.69855595
+      Yaw: 1.67854953
     Saved: ~
 Window Geometry:
   Displays:
