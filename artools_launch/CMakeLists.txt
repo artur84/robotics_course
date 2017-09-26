@@ -9,6 +9,7 @@ project(artools_launch)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   ar_pose
+  uvc_camera
 )
 
 ## System dependencies are found with CMake's conventions
