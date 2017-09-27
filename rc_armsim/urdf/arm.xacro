@@ -19,12 +19,8 @@
  
 <gazebo_propiedades_link nombre="brazo_link_SD" material="White" />     
  
-<gazebo_propiedades_link nombre="antebrazo_link_B" material="White" />   
  
-<gazebo_propiedades_link nombre="antebrazo_link_SI" material="White" />   
- 
-<gazebo_propiedades_link nombre="antebrazo_link_SD" material="White" />   
- 
+  
 <gazebo_propiedades_link nombre="muneca_link_B" material="White" />   
  
 <gazebo_propiedades_link nombre="muneca_link_SI" material="White" />   
@@ -35,13 +31,13 @@
  
 <gazebo_propiedades_link nombre="muneca_link_PS" material="White" />     
  
-<gazebo_propiedades_link nombre="pinza_link" material="White" />   
+<gazebo_propiedades_link nombre="gripper_link" material="White" />   
  
-<gazebo_propiedades_link nombre="pinza_link_B" material="White" />   
+<gazebo_propiedades_link nombre="gripper_link_B" material="White" />   
  
-<gazebo_propiedades_link nombre="pinza_link_SI" material="White" />   
+<gazebo_propiedades_link nombre="gripper_link_SI" material="White" />   
  
-<gazebo_propiedades_link nombre="pinza_link_SD" material="White" /> 
+<gazebo_propiedades_link nombre="gripper_link_SD" material="White" /> 
  
 <gazebo_propiedades_joint nombre="base" />
  
@@ -51,7 +47,7 @@
  
 <gazebo_propiedades_joint nombre="arti3" />
  
-<gazebo_propiedades_joint nombre="pinza" />
+<gazebo_propiedades_joint nombre="gripper" />
  
     <macro name="brazo" params="parent *origin">
  
@@ -154,50 +150,11 @@
  
   <joint name="arti2" type="revolute">
     <parent link="brazo_link"/>
-    <child link="antebrazo_link"/>
-    <origin xyz="0 0 0.104" rpy="0 0 0" />
-    <axis xyz="1 0 0" />
-	<default_limit />
-	<default_dynamics />            
-  </joint>
- 
-<!--Antebrazo-->
- 
-<servo nombre="antebrazo" /> 
- 
-  <joint name="servo_arti2_B" type="fixed">
-    <parent link="antebrazo_link"/>
-    <child link="antebrazo_link_B"/>  
-    <origin xyz="0 0 0" rpy="0 0 0" />
-	<axis xyz="1 0 0" />    
-  </joint>  
- 
-<base nombre="antebrazo" />
- 
-  <joint name="servo_arti2_D" type="fixed">
-    <parent link="antebrazo_link"/>
-    <child link="antebrazo_link_SI"/>  
-    <origin xyz="0 0 0" rpy="0 0 0" />
-	<axis xyz="1 0 0" />    
-  </joint>  
- 
-<soporte nombre="antebrazo" simetrico="1" lado="I" />  
- 
-  <joint name="servo_arti2_I" type="fixed">
-    <parent link="antebrazo_link"/>
-    <child link="antebrazo_link_SD"/>  
-    <origin xyz="0 0 0" rpy="0 0 0" />
-	<axis xyz="1 0 0" />    
-  </joint>  
-<soporte nombre="antebrazo" simetrico="-1" lado="D" />     
- 
-  <joint name="arti3" type="revolute">
-    <parent link="antebrazo_link"/>
     <child link="muneca_link"/>
     <origin xyz="0 0 0.104" rpy="0 0 0" />
     <axis xyz="1 0 0" />
 	<default_limit />
-	<default_dynamics />             
+	<default_dynamics />            
   </joint>
  
 <!--Muneca-->
@@ -318,7 +275,7 @@
 	<axis xyz="1 0 0" />    
   </joint>  
  
-<!--Pinza fija-->
+<!--gripper fija-->
  
   <link name="muneca_link_P">    
 	<visual>
@@ -373,18 +330,18 @@
     </inertial>            
   </link>             
  
-  <joint name="pinza" type="revolute">
+  <joint name="gripper" type="revolute">
     <parent link="muneca_link"/>
-    <child link="pinza_link"/>
+    <child link="gripper_link"/>
     <origin xyz="-0.00725 0 0.06" rpy="0 0 0" />
     <axis xyz="0 1 0" />
 	<default_limit />
 	<default_dynamics />     
   </joint>
  
-<!--Pinza movil-->
+<!--gripper movil-->
  
-  <link name="pinza_link">    
+  <link name="gripper_link">    
 	<visual>
       <geometry>
         <box size="0.002 0.04 0.092"/>
@@ -407,14 +364,14 @@
     </inertial>           
   </link>  
  
-  <joint name="servo_pinza_B" type="fixed">
-    <parent link="pinza_link"/>
-    <child link="pinza_link_B"/>  
+  <joint name="servo_gripper_B" type="fixed">
+    <parent link="gripper_link"/>
+    <child link="gripper_link_B"/>  
     <origin xyz="0 0 0" rpy="0 0 0" />
 	<axis xyz="1 0 0" />    
   </joint>  
  
-  <link name="pinza_link_B">    
+  <link name="gripper_link_B">    
 	<visual>
       <geometry>
         <box size="0.002 0.04 0.032"/>
@@ -437,14 +394,14 @@
     </inertial>           
   </link>
  
-  <joint name="servo_pinza_D" type="fixed">
-    <parent link="pinza_link"/>
-    <child link="pinza_link_SI"/>  
+  <joint name="servo_gripper_D" type="fixed">
+    <parent link="gripper_link"/>
+    <child link="gripper_link_SI"/>  
     <origin xyz="0 0 0" rpy="0 0 0" />
 	<axis xyz="1 0 0" />    
   </joint>  
  
-  <link name="pinza_link_SI">    
+  <link name="gripper_link_SI">    
 	<visual>
       <geometry>
         <box size="0.0375 0.002 0.032"/>
@@ -467,14 +424,14 @@
     </inertial>        
   </link>
  
-  <joint name="servo_pinza_I" type="fixed">
-    <parent link="pinza_link"/>
-    <child link="pinza_link_SD"/>  
+  <joint name="servo_gripper_I" type="fixed">
+    <parent link="gripper_link"/>
+    <child link="gripper_link_SD"/>  
     <origin xyz="0 0 0" rpy="0 0 0" />
 	<axis xyz="1 0 0" />    
   </joint>  
  
-  <link name="pinza_link_SD">    
+  <link name="gripper_link_SD">    
 	<visual>
       <geometry>
         <box size="0.0375 0.002 0.032"/>

@@ -13,5 +13,6 @@
   <node pkg="robot_state_publisher" name="robot_state_publisher"  type="state_publisher" />
  
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rc_armsim)/rviz/rc_armsim.rviz" />
- 
+  
+  <node name="servo2jointstate" pkg="rc_armsim" type="servo2jointstate.py"/> 
 </launch>

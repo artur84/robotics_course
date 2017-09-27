@@ -49,16 +49,11 @@
     <motorTorqueConstant>1.0</motorTorqueConstant>
  </transmission>
  
- <transmission type="pr2_mechanism_model/SimpleTransmission" name="arti3_trans">
-    <actuator name="arti3_motor" />
-    <joint name="arti3" />
-    <mechanicalReduction>1.0</mechanicalReduction>
-    <motorTorqueConstant>1.0</motorTorqueConstant>
- </transmission>
+
  
- <transmission type="pr2_mechanism_model/SimpleTransmission" name="pinza_trans">
-    <actuator name="pinza_motor" />
-    <joint name="pinza" />
+ <transmission type="pr2_mechanism_model/SimpleTransmission" name="gripper_trans">
+    <actuator name="gripper_motor" />
+    <joint name="gripper" />
     <mechanicalReduction>1.0</mechanicalReduction>
     <motorTorqueConstant>1.0</motorTorqueConstant>
  </transmission>

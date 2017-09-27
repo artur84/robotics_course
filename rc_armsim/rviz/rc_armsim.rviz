@@ -59,26 +59,6 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        antebrazo_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        antebrazo_link_B:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        antebrazo_link_SD:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        antebrazo_link_SI:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         base_brazo_link:
           Alpha: 1
           Show Axes: false
@@ -100,6 +80,26 @@ Visualization Manager:
           Show Trail: false
           Value: true
         brazo_link_SI:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_link_B:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_link_SD:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_link_SI:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -139,26 +139,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        pinza_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinza_link_B:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinza_link_SD:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        pinza_link_SI:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         world:
           Alpha: 1
           Show Axes: false
@@ -169,13 +149,6 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: rviz/Axes
-      Enabled: true
-      Length: 0.100000001
-      Name: Axes
-      Radius: 0.00999999978
-      Reference Frame: pinza_link
-      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -200,7 +173,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.18842602
+      Distance: 1.07082295
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
