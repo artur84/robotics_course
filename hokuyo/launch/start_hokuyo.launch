@@ -9,7 +9,7 @@
     <param name="frame_id" value="laser"/-->
 </node>
 
-<node pkg="rviz" type="rviz" name="rviz_hokuyo" args="-d $(find hokuyo)/config/rviz/start_hokuyo.rviz"/>
+<!--node pkg="rviz" type="rviz" name="rviz_hokuyo" args="-d $(find hokuyo)/config/rviz/start_hokuyo.rviz"/-->
     
 
 
