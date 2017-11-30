@@ -1,0 +1,16 @@
+<!-- This launch file starts the hokuyo with the required configuration parameters-->
+
+<launch>
+<node pkg="urg_node" type="urg_node" name="hokuyo1">
+    <!-- Default parameters: {angle_max: 2.0923497946760143, angle_min: -2.356194490192345, cluster: 1, frame_id: laser,
+  skip: 0, tf_prefix: '', time_offset: 0.0}
+ -->
+    <!--param name="angle_max" value=""/>
+    <param name="frame_id" value="laser"/-->
+</node>
+
+<node pkg="rviz" type="rviz" name="rviz_hokuyo" args="-d $(find hokuyo)/config/rviz/start_hokuyo.rviz"/>
+    
+
+
+</launch>
