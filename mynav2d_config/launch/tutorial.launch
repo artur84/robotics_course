@@ -1,0 +1,24 @@
+<!-- Launches  asimilar behavior to the nav2d tutorial1.launch 
+but adapted to the two_wheels_description simulator instead of the stage simulator-->
+<launch>
+
+	<!-- Some general parameters -->
+	<param name="use_sim_time" value="true" />
+	<rosparam file="$(find mynav2d_config)/param/ros.yaml"/>
+
+
+	<!-- Start the Operator to control the simulated robot -->
+	<node name="Operator" pkg="nav2d_operator" type="operator" >
+		<!--remap from="scan" to="base_scan"/-->
+		<rosparam file="$(find mynav2d_config)/param/operator.yaml"/>
+		<rosparam file="$(find mynav2d_config)/param/costmap.yaml" ns="local_map" />
+	</node>
+
+	<!-- Start the joystick-driver and remote-controller for operation-->
+	<!--node name="Joystick" pkg="joy" type="joy_node" />
+	<node name="Remote" pkg="nav2d_remote" type="remote_joy" /-->
+
+	<!-- RVIZ to view the visualization -->
+	<node name="RVIZ" pkg="rviz" type="rviz" args=" -d $(find mynav2d_config)/param/tutorial1.rviz" />
+
+</launch>
