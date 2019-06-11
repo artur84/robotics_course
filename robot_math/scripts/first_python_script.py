@@ -6,7 +6,7 @@ I=np.eye(3)
 np.empty((3,3))
 X=np.array([[1,2,3],[2,2,2],[3,3,3]])
 Y=np.array([[1,5,2],[0,0,0],[0,0,0]])
-a-b
+
 v=np.array([[1],[3],[0]])
 X@v
 XI=np.linalg.pinv(X)
@@ -20,3 +20,4 @@ def rotx(angle,type="rad"):
     return R
 
 R=rotx(30,"deg")
+print(R)
