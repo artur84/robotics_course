@@ -1,6 +1,6 @@
 # Import libraries
 import numpy
-import pylab #To install this python -m pip install -U matplotlib --user
+import pylab  # To install this python -m pip install -U matplotlib --user
 import random
 
 # Number of steps and defining the array for them
@@ -27,5 +27,6 @@ for i in range(1, n):
 # Plotting the results
 pylab.title("Random Walk ($n = " + str(n) + "$ steps)")
 pylab.plot(x, y)
-pylab.savefig("./robot_math/scripts/spyderWalk.png", bbox_inches="tight", dpi=600)
+pylab.savefig("./robot_math/scripts/spyderWalk.png",
+              bbox_inches="tight", dpi=600)
 pylab.show()
