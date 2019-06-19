@@ -35,8 +35,11 @@ x = pose.SE3.rand()
 y = pose.SE3.rand()
 
 z = x * y
-
 print(z)
+Rx
+Ry
+Rt=Rx*Ry
+print(Rt)
 
 """ Plot poses
 """
