@@ -1,3 +1,6 @@
+""" The robopy library is taken from Peter's Corke library
+In the Robotics, Vision and Control Book
+"""
 from robopy import *
 import numpy as np
 
@@ -48,9 +51,14 @@ T2.plot()
 
 """ Animate a frame between two poses
 """
+T3.animate()
+
+#Just rotations described with quaternions
 x = UnitQuaternion.Rx(10, 'deg')
 y = UnitQuaternion.Ry(120, 'deg')
 x.animate(y, duration=15)
+
+
 
 """ Create a gif of a moving frame
 """
@@ -68,7 +76,7 @@ e = np.asmatrix(np.zeros((500, 1)))
 f = np.concatenate((d, b, a, e, c, d), axis=1)
 robot.animate(stances=f, frame_rate=30, unit='deg')
 
-
-
+""" Get the corresponding skew-symmetric matrix of a vector
 """
-"""
+print(skew(np.matrix([1,2,0.5])))
+print(VecToso3)
